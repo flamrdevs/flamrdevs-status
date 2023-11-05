@@ -1,0 +1,11 @@
+.sm {
+	@apply w-6 h-6 p-px text-z2 font-w4;
+}
+
+.md {
+	@apply w-8 h-8 p-0.5 text-z3 font-w5;
+}
+
+.lg {
+	@apply w-10 h-10 p-1 text-z4 font-w5;
+}

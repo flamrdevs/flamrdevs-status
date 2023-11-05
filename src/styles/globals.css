@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	@apply bg-cn-1 text-cn-12 font-sans;
+}
+
+::-webkit-scrollbar {
+	width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+	background: rgb(var(--cn-2) / 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(var(--cn-5));
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(var(--cn-8));
+}
+
+::-moz-selection {
+	background: rgb(var(--ci-9));
+	color: white;
+}
+
+::selection {
+	background: rgb(var(--ci-9));
+	color: white;
+}
+
+a {
+	@apply no-underline;
+}
+
+.lucide {
+	fill: none;
+	stroke-width: 1.5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.va-n {
+	--va-1: var(--cn-1);
+	--va-2: var(--cn-2);
+	--va-3: var(--cn-3);
+	--va-4: var(--cn-4);
+	--va-5: var(--cn-5);
+	--va-6: var(--cn-6);
+	--va-7: var(--cn-7);
+	--va-8: var(--cn-8);
+	--va-9: var(--cn-9);
+	--va-10: var(--cn-10);
+	--va-11: var(--cn-11);
+	--va-12: var(--cn-12);
+}
+
+.va-p {
+	--va-1: var(--cp-1);
+	--va-2: var(--cp-2);
+	--va-3: var(--cp-3);
+	--va-4: var(--cp-4);
+	--va-5: var(--cp-5);
+	--va-6: var(--cp-6);
+	--va-7: var(--cp-7);
+	--va-8: var(--cp-8);
+	--va-9: var(--cp-9);
+	--va-10: var(--cp-10);
+	--va-11: var(--cp-11);
+	--va-12: var(--cp-12);
+}
+
+.va-s {
+	--va-1: var(--cs-1);
+	--va-2: var(--cs-2);
+	--va-3: var(--cs-3);
+	--va-4: var(--cs-4);
+	--va-5: var(--cs-5);
+	--va-6: var(--cs-6);
+	--va-7: var(--cs-7);
+	--va-8: var(--cs-8);
+	--va-9: var(--cs-9);
+	--va-10: var(--cs-10);
+	--va-11: var(--cs-11);
+	--va-12: var(--cs-12);
+}
+
+.va-i {
+	--va-1: var(--ci-1);
+	--va-2: var(--ci-2);
+	--va-3: var(--ci-3);
+	--va-4: var(--ci-4);
+	--va-5: var(--ci-5);
+	--va-6: var(--ci-6);
+	--va-7: var(--ci-7);
+	--va-8: var(--ci-8);
+	--va-9: var(--ci-9);
+	--va-10: var(--ci-10);
+	--va-11: var(--ci-11);
+	--va-12: var(--ci-12);
+}
+
+.va-w {
+	--va-1: var(--cw-1);
+	--va-2: var(--cw-2);
+	--va-3: var(--cw-3);
+	--va-4: var(--cw-4);
+	--va-5: var(--cw-5);
+	--va-6: var(--cw-6);
+	--va-7: var(--cw-7);
+	--va-8: var(--cw-8);
+	--va-9: var(--cw-9);
+	--va-10: var(--cw-10);
+	--va-11: var(--cw-11);
+	--va-12: var(--cw-12);
+}
+
+.va-d {
+	--va-1: var(--cd-1);
+	--va-2: var(--cd-2);
+	--va-3: var(--cd-3);
+	--va-4: var(--cd-4);
+	--va-5: var(--cd-5);
+	--va-6: var(--cd-6);
+	--va-7: var(--cd-7);
+	--va-8: var(--cd-8);
+	--va-9: var(--cd-9);
+	--va-10: var(--cd-10);
+	--va-11: var(--cd-11);
+	--va-12: var(--cd-12);
+}
+
+.filter-noise-layer {
+	&::after {
+		content: "";
+		@apply block absolute z-10 inset-0 overflow-hidden opacity-10;
+		background: linear-gradient(to bottom, #2222221a, #1111111a), var(--filter-noise-svg);
+	}
+}
