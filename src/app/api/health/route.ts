@@ -1,4 +1,8 @@
-export async function GET() {
+export async function POST(request: Request) {
+	const json = await request.json();
+
+	console.log(json);
+
 	return Response.json(
 		{
 			ok: true,
