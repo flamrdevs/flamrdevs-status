@@ -1,6 +1,9 @@
 import type { CSSProperties } from "react";
 
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
+
+import { getTheme } from "~/styles/utils.ts";
 
 import { HOST } from "~/utils/exports.ts";
 
@@ -28,10 +31,14 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+	const cookieStore = cookies();
+	const theme = cookieStore.get("theme");
+
 	return (
 		<html
+			id="html"
 			lang="en"
-			data-theme="light"
+			data-theme={getTheme(theme?.value)}
 			style={{
 				...({
 					"--filter-noise-svg": `url(${HOST.STATIC("svgs", "filter-noise.svg")})`,
