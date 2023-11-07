@@ -1,0 +1,9 @@
+.tooltip-trigger-base {
+	@apply block flex-grow w-auto h-12 border-solid rounded-full outline-none select-none;
+	padding-block: 0;
+	padding-inline: 0;
+}
+
+.tooltip-content {
+	@apply px-2 py-1 bg-cn-1 text-cn-11 border border-solid border-cn-3 rounded-8 select-none;
+}
