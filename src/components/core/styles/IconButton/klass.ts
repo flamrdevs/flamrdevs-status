@@ -1,9 +1,9 @@
 import { klass } from "@klass/core";
 import type { VariantsOf } from "@klass/core";
 
-import * as BaseButtonStyle from "./BaseButton.style.ts";
+import * as BaseButtonStyle from "../BaseButton/style.ts";
 
-import styles from "./IconButton.module.css";
+import styles from "./style.module.css";
 
 type Variants = VariantsOf<typeof Root>;
 

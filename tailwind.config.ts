@@ -55,37 +55,9 @@ const screens = {
 	xl: "1536px",
 };
 
-const breakpoints = Object.keys(screens) as (keyof typeof screens)[];
-const responsive = (...classNames: string[]) => {
-	let result: string[] = [];
-	classNames.forEach((className) => result.push(className, ...breakpoints.map((breakpoint) => `${breakpoint}:${className}`)));
-	return result;
-};
-
-const space = (property: string) => {
-	return [`${property}-0`, `${property}-1`, `${property}-2`, `${property}-3`, `${property}-4`, `${property}-5`, `${property}-6`, `${property}-7`, `${property}-8`];
-};
-
 export default {
 	content: ["src/**/*.{astro,ts,tsx}", "src/components/core/styles/.{klass,reklass}.ts"],
-	safelist: [
-		...responsive(
-			...["hidden", "block", "inline-block", "flex", "inline-flex", "grid", "inline-grid"],
-			...["items-start", "items-center", "items-end", "items-stretch"],
-			...["justify-start", "justify-center", "justify-end", "justify-stretch", "justify-around", "justify-between", "justify-evenly"],
-			...space("gap")
-		),
-		...responsive(
-			...["relative", "absolute", "fixed", "sticky"],
-			...["-z-10", "z-0", "z-10", "z-20", "z-30", "z-40", "z-50"],
-			...space("top"),
-			...space("right"),
-			...space("bottom"),
-			...space("left")
-		),
-		...responsive(...space("m"), ...space("mx"), ...space("my"), ...space("mt"), ...space("mr"), ...space("mb"), ...space("ml")),
-		...responsive(...space("p"), ...space("px"), ...space("py"), ...space("pt"), ...space("pr"), ...space("pb"), ...space("pl")),
-	],
+	safelist: [],
 	theme: {
 		screens,
 		colors: {
