@@ -19,7 +19,10 @@ type PropsWithoutAsChild<P extends AsChildProp> = Omit<P, keyof AsChildProp>;
 
 const create = forwardRef as <DC extends ElementType, P>(
 	component: (props: { as: DC } & P, ref: ForwardedRef<ComponentRef<DC>>) => JSX.Element
-) => <C extends ElementType = DC>(props: Props<C, P>) => JSX.Element;
+) => {
+	<C extends ElementType = DC>(props: Props<C, P>): JSX.Element;
+	displayName?: string;
+};
 
 export type { PropsWithoutAsChild };
 export { create };

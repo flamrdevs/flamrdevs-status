@@ -2,19 +2,19 @@ import { describe, expect, it, vi } from "vitest";
 
 import { fireEvent } from "@testing-library/react";
 
-import { A, renderRootElement } from "../../test.utils.tsx";
+import { A, renderRootElement, expectElement } from "../../test.utils.tsx";
 
 import { Button, IconButton } from "../buttons.tsx";
 
 describe("Button", () => {
 	it("Basic", () => {
 		const [element] = renderRootElement((props) => <Button {...props} />);
-		expect(element.tagName).toEqual("BUTTON");
+		expectElement(element).tagName("BUTTON");
 	});
 
 	it("Polymorphic", () => {
 		const [element] = renderRootElement((props) => <Button as={A} {...props} />);
-		expect(element.tagName).toEqual("A");
+		expectElement(element).tagName("A");
 	});
 
 	it("Clicky", () => {
@@ -28,12 +28,12 @@ describe("Button", () => {
 describe("IconButton", () => {
 	it("Basic", () => {
 		const [element] = renderRootElement((props) => <IconButton {...props} />);
-		expect(element.tagName).toEqual("BUTTON");
+		expectElement(element).tagName("BUTTON");
 	});
 
 	it("Polymorphic", () => {
 		const [element] = renderRootElement((props) => <IconButton as={A} {...props} />);
-		expect(element.tagName).toEqual("A");
+		expectElement(element).tagName("A");
 	});
 
 	it("Clicky", () => {

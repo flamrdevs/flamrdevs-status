@@ -1,6 +1,7 @@
 import type { JSX, JSXElementConstructor } from "react";
 
 import { render } from "@testing-library/react";
+import { expect } from "vitest";
 
 type RenderBaseOptions = {
 	container?: HTMLElement;
@@ -20,4 +21,13 @@ const renderRootElement = (Callback: (props: { ["data-testid"]?: string }) => JS
 	return [element, result] as const;
 };
 
-export { renderRootElement };
+const expectElement = (element: HTMLElement) => {
+	return {
+		tagName(expected: string) {
+			expect(element.tagName).toEqual(expected);
+			return this;
+		},
+	};
+};
+
+export { renderRootElement, expectElement };
