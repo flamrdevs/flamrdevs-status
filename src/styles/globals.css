@@ -138,9 +138,9 @@ a {
 }
 
 .bg-border-gradient {
-	--xpg: rgb(var(--va-1)), rgb(var(--va-1));
+	--xpg: rgb(var(--va-2)), rgb(var(--va-1)), rgb(var(--va-1));
 	--xbg: rgb(var(--va-4)), rgb(var(--va-3)), rgb(var(--va-2)), rgb(var(--va-3));
-	background: padding-box linear-gradient(135deg, var(--xpg)), border-box linear-gradient(135deg, var(--xbg));
+	background: padding-box linear-gradient(180deg, var(--xpg)), border-box linear-gradient(180deg, var(--xbg));
 }
 
 .filter-noise-layer {

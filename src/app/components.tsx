@@ -35,22 +35,20 @@ const Series = ({ date, elements }: { date: string; elements: Element[] }) => {
 };
 
 const Item = (props: {
-	data: {
-		name: string;
-		series: {
-			date: string;
-			elements: Element[];
-		}[];
-	};
+	name: string;
+	series: {
+		date: string;
+		elements: Element[];
+	}[];
 }) => {
 	return (
 		<TooltipProvider delayDuration={100}>
 			<div className="relative flex flex-col gap-2 p-3 border border-solid border-transparent rounded-14 shadow va-n bg-border-gradient">
 				<div className="flex items-center justify-between">
-					<span className="text-z3 font-w5">{props.data.name}</span>
+					<span className="text-z3 font-w5">{props.name}</span>
 				</div>
 				<div className="flex flex-row gap-1">
-					{props.data.series.map(({ date, elements }, index) => (
+					{props.series.map(({ date, elements }, index) => (
 						<Series key={index} date={date} elements={elements} />
 					))}
 				</div>
